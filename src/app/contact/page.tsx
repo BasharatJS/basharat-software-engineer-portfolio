@@ -1,7 +1,9 @@
-import React from 'react'
+import ContactHero from '@/components/contact/ContactHero'
 
-const ContactPage = () => {
-  return <div style={{ padding: '120px', margin: '20px 0' }}>ContactPage</div>
+export default function ContactPage() {
+  return (
+    <main className="pt-16">
+      <ContactHero />
+    </main>
+  )
 }
-
-export default ContactPage

@@ -19,9 +19,11 @@ export default function Header() {
     if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
       setIsDark(true);
       document.documentElement.setAttribute('data-theme', 'dark');
+      document.documentElement.classList.add('dark');
     } else {
       setIsDark(false);
       document.documentElement.setAttribute('data-theme', 'light');
+      document.documentElement.classList.remove('dark');
     }
   }, []);
 
@@ -29,6 +31,11 @@ export default function Header() {
     const newTheme = !isDark;
     setIsDark(newTheme);
     document.documentElement.setAttribute('data-theme', newTheme ? 'dark' : 'light');
+    if (newTheme) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
     localStorage.setItem('theme', newTheme ? 'dark' : 'light');
   };
 
@@ -38,7 +45,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <h1 className="text-lg lg:text-xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
-              CodeByBasharat.com
+              CodeByBasharat
             </h1>
           </div>
           

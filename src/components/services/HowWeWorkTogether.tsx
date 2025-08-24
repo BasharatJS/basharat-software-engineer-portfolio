@@ -193,11 +193,19 @@ export default function HowWeWorkTogether() {
           {/* Connection Lines */}
           <div className="hidden lg:block">
             {/* Horizontal connecting line */}
-            <div className="absolute top-32 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 via-purple-600 via-green-600 to-orange-600 opacity-20"></div>
+            <div 
+              className="absolute top-32 left-0 right-0 h-0.5 opacity-30"
+              style={{
+                background: 'linear-gradient(to right, #3b82f6, #8b5cf6, #22c55e, #f97316)'
+              }}
+            ></div>
             
             {/* Animated progress line */}
             <motion.div
-              className="absolute top-32 left-0 h-0.5 bg-gradient-to-r from-blue-600 via-purple-600 via-green-600 to-orange-600"
+              className="absolute top-32 left-0 h-0.5 opacity-80"
+              style={{
+                background: 'linear-gradient(to right, #3b82f6, #8b5cf6, #22c55e, #f97316)'
+              }}
               initial={{ width: 0 }}
               whileInView={{ width: '100%' }}
               transition={{ duration: 2, delay: 0.5 }}
