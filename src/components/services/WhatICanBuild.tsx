@@ -14,6 +14,7 @@ import {
   Zap,
   ArrowRight,
 } from 'lucide-react'
+import Link from 'next/link'
 
 export default function WhatICanBuild() {
   const fadeInUp = {
@@ -139,7 +140,7 @@ export default function WhatICanBuild() {
   ]
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="what-i-can-build" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         
         {/* Section Header */}
@@ -297,28 +298,30 @@ export default function WhatICanBuild() {
                   </div>
 
                   {/* Get Started Button */}
-                  <motion.button
-                    className={`w-full py-3 rounded-xl font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden mt-auto bg-gradient-to-r ${service.color} border-2 border-transparent hover:border-white/20`}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <span className="relative z-10 flex items-center justify-center gap-2 text-white font-semibold">
-                      <Zap className="h-4 w-4 text-white" />
-                      Get Started
-                      <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform text-white" />
-                    </span>
-                    {/* Button Shine Effect */}
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                      animate={{ x: ['-100%', '100%'] }}
-                      transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        repeatDelay: 3,
-                        ease: 'easeInOut',
-                      }}
-                    />
-                  </motion.button>
+                  <Link href="/contact">
+                    <motion.button
+                      className={`w-full py-3 rounded-xl font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden mt-auto bg-gradient-to-r ${service.color} border-2 border-transparent hover:border-white/20`}
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <span className="relative z-10 flex items-center justify-center gap-2 text-white font-semibold">
+                        <Zap className="h-4 w-4 text-white" />
+                        Get Started
+                        <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform text-white" />
+                      </span>
+                      {/* Button Shine Effect */}
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                        animate={{ x: ['-100%', '100%'] }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          repeatDelay: 3,
+                          ease: 'easeInOut',
+                        }}
+                      />
+                    </motion.button>
+                  </Link>
                 </div>
 
                 {/* Decorative Elements */}
@@ -360,26 +363,28 @@ export default function WhatICanBuild() {
             and build something amazing together.
           </p>
           
-          <motion.button
-            className="px-10 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <span className="relative z-10 flex items-center gap-2">
-              Let's Discuss Your Project
-              <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </span>
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-              animate={{ x: ['-100%', '100%'] }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                repeatDelay: 3,
-                ease: 'easeInOut',
-              }}
-            />
-          </motion.button>
+          <Link href="/contact">
+            <motion.button
+              className="px-10 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <span className="relative z-10 flex items-center gap-2">
+                Let's Discuss Your Project
+                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </span>
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                animate={{ x: ['-100%', '100%'] }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  repeatDelay: 3,
+                  ease: 'easeInOut',
+                }}
+              />
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
     </section>

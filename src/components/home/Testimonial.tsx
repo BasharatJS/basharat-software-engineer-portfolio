@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { MessageCircle } from 'lucide-react'
+import Link from 'next/link'
 
 export default function Testimonial() {
   const fadeInUp = {
@@ -261,23 +262,25 @@ export default function Testimonial() {
             smart, automated solutions that scale with your business.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">
-            <motion.button
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <span className="relative z-10">Get a Free Consultation</span>
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                animate={{ x: ['-100%', '100%'] }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  repeatDelay: 3,
-                  ease: 'easeInOut',
-                }}
-              />
-            </motion.button>
+            <Link href="/contact">
+              <motion.button
+                className="px-8 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <span className="relative z-10">Get a Free Consultation</span>
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                  animate={{ x: ['-100%', '100%'] }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    repeatDelay: 3,
+                    ease: 'easeInOut',
+                  }}
+                />
+              </motion.button>
+            </Link>
 
             <motion.a
               href="https://wa.me/919492976113?text=Hello!%20I%20saw%20your%20portfolio%20and%20I%27m%20interested%20in%20discussing%20a%20project.%20Can%20we%20schedule%20a%20consultation%3F"

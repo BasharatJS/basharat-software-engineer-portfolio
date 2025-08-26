@@ -12,6 +12,7 @@ import {
   ArrowRight,
   CheckCircle,
 } from 'lucide-react'
+import Link from 'next/link'
 
 export default function ServicesHero() {
   const fadeInUp = {
@@ -171,35 +172,45 @@ export default function ServicesHero() {
             variants={fadeInUp}
             className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8"
           >
-            <motion.button
-              className="px-10 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group text-lg"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <span className="relative z-10 flex items-center gap-3">
-                <Zap className="h-6 w-6" />
-                Start Your Project
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </span>
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                animate={{ x: ['-100%', '100%'] }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  repeatDelay: 3,
-                  ease: 'easeInOut',
-                }}
-              />
-            </motion.button>
+            <Link href="/contact">
+              <motion.button
+                className="px-10 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group text-lg"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <span className="relative z-10 flex items-center gap-3">
+                  <Zap className="h-6 w-6" />
+                  Start Your Project
+                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </span>
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                  animate={{ x: ['-100%', '100%'] }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    repeatDelay: 3,
+                    ease: 'easeInOut',
+                  }}
+                />
+              </motion.button>
+            </Link>
 
-            <motion.button
-              className="px-10 py-4 border-2 border-primary/20 bg-card/50 backdrop-blur-sm text-foreground rounded-xl font-medium hover:border-transparent hover:bg-gradient-to-r hover:from-blue-600/10 hover:via-purple-600/10 hover:to-indigo-600/10 transition-all hover:scale-105 hover:shadow-lg text-lg"
+            <motion.a
+              href="#what-i-can-build"
+              className="px-10 py-4 border-2 border-primary/20 bg-card/50 backdrop-blur-sm text-foreground rounded-xl font-medium hover:border-transparent hover:bg-gradient-to-r hover:from-blue-600/10 hover:via-purple-600/10 hover:to-indigo-600/10 transition-all hover:scale-105 hover:shadow-lg text-lg inline-block text-center"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById('what-i-can-build');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
             >
               View Our Services
-            </motion.button>
+            </motion.a>
           </motion.div>
 
          

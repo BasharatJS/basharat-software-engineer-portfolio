@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 export default function FeaturedProjects() {
   const fadeInUp = {
@@ -92,6 +93,7 @@ export default function FeaturedProjects() {
               gradientFrom: '#3b82f6',
               gradientTo: '#06b6d4',
               icon: '🏥',
+              url: 'https://dental-surgeon-appointment-booking.vercel.app/',
             },
             {
               title: 'Patient Queue Management System',
@@ -103,6 +105,7 @@ export default function FeaturedProjects() {
               gradientFrom: '#10b981',
               gradientTo: '#059669',
               icon: '🏥',
+              url: 'https://patient-queue-management-system.vercel.app/',
             },
             {
               title: 'Biryani Order & Sales Management',
@@ -114,6 +117,7 @@ export default function FeaturedProjects() {
               gradientFrom: '#f97316',
               gradientTo: '#ef4444',
               icon: '🍛',
+              url: 'https://biryani-classical-sales-app.vercel.app/',
             },
           ].map((project, index) => (
             <motion.div
@@ -238,8 +242,11 @@ export default function FeaturedProjects() {
                     </div>
                   </div>
 
-                  <motion.button
-                    className="w-full py-3 rounded-xl font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden"
+                  <motion.a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full py-3 rounded-xl font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden text-center"
                     style={{
                       background: `linear-gradient(135deg, ${project.gradientFrom}, ${project.gradientTo})`,
                     }}
@@ -259,7 +266,7 @@ export default function FeaturedProjects() {
                         ease: 'easeInOut',
                       }}
                     />
-                  </motion.button>
+                  </motion.a>
                 </div>
 
                 <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -276,32 +283,34 @@ export default function FeaturedProjects() {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <motion.button
-            className="px-10 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white font-semibold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden group"
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <span className="relative z-10 flex items-center gap-3">
-              View All Projects
-              <motion.span
-                animate={{ x: [0, 5, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-              >
-                →
-              </motion.span>
-            </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 opacity-0 group-hover:opacity-30 transition-opacity duration-300 rounded-2xl blur-lg"></div>
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-              animate={{ x: ['-100%', '100%'] }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                repeatDelay: 3,
-                ease: 'easeInOut',
-              }}
-            />
-          </motion.button>
+          <Link href="/projects">
+            <motion.button
+              className="px-10 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white font-semibold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden group"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <span className="relative z-10 flex items-center gap-3">
+                View All Projects
+                <motion.span
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                >
+                  →
+                </motion.span>
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 opacity-0 group-hover:opacity-30 transition-opacity duration-300 rounded-2xl blur-lg"></div>
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                animate={{ x: ['-100%', '100%'] }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  repeatDelay: 3,
+                  ease: 'easeInOut',
+                }}
+              />
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
     </section>

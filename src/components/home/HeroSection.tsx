@@ -130,7 +130,7 @@ export default function HeroSection() {
               LinkedIn
             </a>
             <a
-              href="file:///c:/Users/Mohammad%20Basharat/Desktop/Software_Dev_Update_PF_Resume.pdf"
+              href="/Basharat-Software-Engineer-Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="group px-8 py-4 border-2 border-primary/20 bg-card/50 backdrop-blur-sm text-foreground rounded-xl font-medium hover:border-transparent hover:bg-gradient-to-r hover:from-blue-600 hover:via-purple-600 hover:to-indigo-600 hover:text-white transition-all hover:scale-105 hover:shadow-xl flex items-center gap-2"

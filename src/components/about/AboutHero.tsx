@@ -14,7 +14,10 @@ import {
   Heart,
   Zap,
   Star,
+  Download,
 } from 'lucide-react'
+import Link from 'next/link'
+import Image from 'next/image'
 
 export default function AboutHero() {
   const fadeInLeft = {
@@ -167,34 +170,40 @@ export default function AboutHero() {
 
             {/* CTA Buttons */}
             <motion.div variants={fadeInLeft} className="flex flex-col sm:flex-row gap-4 pt-4">
-              <motion.button
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <span className="relative z-10 flex items-center gap-2">
-                  <Zap className="h-5 w-5" />
-                  Start a Project
-                </span>
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                  animate={{ x: ['-100%', '100%'] }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    repeatDelay: 3,
-                    ease: 'easeInOut',
-                  }}
-                />
-              </motion.button>
+              <Link href="/contact">
+                <motion.button
+                  className="px-8 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <span className="relative z-10 flex items-center gap-2">
+                    <Zap className="h-5 w-5" />
+                    Start a Project
+                  </span>
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                    animate={{ x: ['-100%', '100%'] }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      repeatDelay: 3,
+                      ease: 'easeInOut',
+                    }}
+                  />
+                </motion.button>
+              </Link>
 
-              <motion.button
-                className="px-8 py-4 border-2 border-primary/20 bg-card/50 backdrop-blur-sm text-foreground rounded-xl font-medium hover:border-transparent hover:bg-gradient-to-r hover:from-blue-600/10 hover:via-purple-600/10 hover:to-indigo-600/10 transition-all hover:scale-105 hover:shadow-lg"
+              <motion.a
+                href="/Basharat-Software-Engineer-Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 border-2 border-primary/20 bg-card/50 backdrop-blur-sm text-foreground rounded-xl font-medium hover:border-transparent hover:bg-gradient-to-r hover:from-blue-600/10 hover:via-purple-600/10 hover:to-indigo-600/10 transition-all hover:scale-105 hover:shadow-lg flex items-center gap-2 justify-center"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
+                <Download className="h-5 w-5" />
                 Download Resume
-              </motion.button>
+              </motion.a>
             </motion.div>
           </motion.div>
 
@@ -216,17 +225,16 @@ export default function AboutHero() {
               {/* Main Photo Frame */}
               <div className="relative w-full h-full rounded-3xl bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 p-1 shadow-2xl">
                 <div className="w-full h-full rounded-3xl bg-card overflow-hidden">
-                  {/* Placeholder for Photo */}
-                  <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 flex items-center justify-center rounded-3xl">
-                    <div className="text-center space-y-4">
-                      <div className="w-24 h-24 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white text-4xl font-bold mx-auto">
-                        B
-                      </div>
-                      <div className="text-muted-foreground">
-                        <p className="font-medium">Your Photo Here</p>
-                        <p className="text-sm">Professional Portrait</p>
-                      </div>
-                    </div>
+                  {/* Professional Photo */}
+                  <div className="w-full h-full rounded-3xl overflow-hidden">
+                    <Image
+                      src="/images/basharat.jpg"
+                      alt="Basharat - Software Engineer"
+                      width={400}
+                      height={500}
+                      className="w-full h-full object-cover object-center"
+                      priority
+                    />
                   </div>
                 </div>
               </div>
