@@ -44,12 +44,13 @@ export default function ContactHero() {
   ]
 
   const budgetRanges = [
-    '$5,000 - $10,000',
-    '$10,000 - $25,000',
-    '$25,000 - $50,000',
-    '$50,000 - $100,000',
-    '$100,000+',
-    'Let\'s Discuss'
+    'Less than $500',
+    '$500 - $1,000',
+    '$1,000 - $2,000',
+    '$2,000 - $3,000',
+    '$3,000 - $4,000',
+    '$4,000 - $5,000',
+    '$5,000+'
   ]
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -398,7 +399,7 @@ export default function ContactHero() {
                   </div>
                   <div>
                     <p className="font-semibold text-foreground">Email</p>
-                    <p className="text-sm text-muted-foreground">softwaredeveloper@gmail.com</p>
+                    <p className="text-sm text-muted-foreground">mdbasharattaquee@gmail.com</p>
                     <p className="text-sm text-muted-foreground">tutortaquee123@gmail.com</p>
                   </div>
                 </motion.div>

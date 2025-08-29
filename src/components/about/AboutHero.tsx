@@ -44,7 +44,7 @@ export default function AboutHero() {
     { name: 'Custom Web Development', icon: <Globe className="h-5 w-5" /> },
     { name: 'Mobile App Development', icon: <Smartphone className="h-5 w-5" /> },
     { name: 'Full-Stack Solutions', icon: <Code className="h-5 w-5" /> },
-    { name: 'UI/UX Design', icon: <Star className="h-5 w-5" /> },
+    { name: 'E-commerce Development', icon: <Star className="h-5 w-5" /> },
   ]
 
   const highlights = [

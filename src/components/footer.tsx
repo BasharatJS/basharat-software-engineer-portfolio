@@ -57,7 +57,7 @@ export default function Footer() {
                 <Linkedin className="h-5 w-5 group-hover:rotate-12 transition-transform" />
               </a>
               <a
-                href="mailto:softwaredeveloper@gmail.com"
+                href="mailto:mdbasharattaquee@gmail.com"
                 className="group p-3 rounded-xl bg-gradient-to-br from-red-500 to-red-600 hover:from-red-400 hover:to-red-500 text-white transition-all duration-300 hover:scale-110 hover:shadow-lg"
                 aria-label="Email"
               >
@@ -74,12 +74,11 @@ export default function Footer() {
             </h4>
             <div className="space-y-3">
               {[
-                { name: 'Home', href: '#home' },
-                { name: 'About', href: '#about' },
-                { name: 'Projects', href: '#projects' },
-                { name: 'Technology Stack', href: '#tech' },
-                { name: 'Testimonials', href: '#testimonials' },
-                { name: 'Contact', href: '#contact' },
+                { name: 'Home', href: '/' },
+                { name: 'About', href: '/about' },
+                { name: 'Projects', href: '/projects' },
+                { name: 'Services', href: '/services' },
+                { name: 'Contact', href: '/contact' },
               ].map((link, index) => (
                 <a
                   key={index}
@@ -109,13 +108,14 @@ export default function Footer() {
                 { name: 'Accounting & Financial System', icon: Calculator },
                 { name: 'System Integration', icon: Settings },
               ].map((service, index) => (
-                <div
+                <a
                   key={index}
+                  href="/services"
                   className="group flex items-center text-muted-foreground hover:text-transparent hover:bg-gradient-to-r hover:from-purple-600 hover:to-indigo-600 hover:bg-clip-text transition-all duration-300 cursor-pointer"
                 >
                   <service.icon className="w-4 h-4 mr-3 text-purple-600 group-hover:scale-110 transition-transform" />
                   {service.name}
-                </div>
+                </a>
               ))}
             </div>
           </div>
@@ -140,18 +140,28 @@ export default function Footer() {
                 <div className="p-2 rounded-lg bg-gradient-to-br from-purple-500 to-purple-600 text-white">
                   <Mail className="h-4 w-4" />
                 </div>
-                <span className="text-muted-foreground group-hover:text-foreground transition-colors">
-                  softwaredeveloper@gmail.com
-                </span>
+                <div className="flex flex-col">
+                  <span className="text-muted-foreground group-hover:text-foreground transition-colors">
+                    mdbasharattaquee@gmail.com
+                  </span>
+                  <span className="text-muted-foreground group-hover:text-foreground transition-colors">
+                    tutortaquee123@gmail.com
+                  </span>
+                </div>
               </div>
 
               <div className="group flex items-center gap-4 p-3 rounded-lg bg-gradient-to-r from-transparent to-accent/30 hover:from-accent/20 hover:to-accent/50 transition-all duration-300">
                 <div className="p-2 rounded-lg bg-gradient-to-br from-green-500 to-green-600 text-white">
                   <Phone className="h-4 w-4" />
                 </div>
-                <span className="text-muted-foreground group-hover:text-foreground transition-colors">
-                  +91 9492976113
-                </span>
+                <div className="flex flex-col">
+                  <span className="text-muted-foreground group-hover:text-foreground transition-colors">
+                    +91 9492976113
+                  </span>
+                  <span className="text-muted-foreground group-hover:text-foreground transition-colors">
+                    +91 8178764456
+                  </span>
+                </div>
               </div>
             </div>
           </div>
