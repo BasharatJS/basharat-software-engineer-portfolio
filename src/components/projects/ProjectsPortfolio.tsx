@@ -40,26 +40,60 @@ export default function ProjectsPortfolio() {
   }
 
   const projects = [
-    // Featured Projects (First 3)
+    // Featured Projects (First 4)
     {
       id: 1,
-      title: 'Doctor Appointment Booking App',
-      category: 'Healthcare',
+      title: 'EvonChat - Real-time Chat Application',
+      category: 'Communication',
       type: 'Featured',
-      description: 'Complete appointment booking system with real-time availability, patient records, and automated notifications for seamless healthcare management.',
-      fullDescription: 'A comprehensive healthcare management system that revolutionizes how patients book appointments and how doctors manage their practice. Features include real-time scheduling, patient history tracking, automated reminders, and integrated payment processing.',
-      image: 'from-blue-500 to-cyan-500',
-      tech: ['Next.js', 'Firebase', 'Tailwind CSS', 'Real-time Database', 'Authentication'],
-      gradientFrom: '#3b82f6',
-      gradientTo: '#06b6d4',
-      icon: '🏥',
+      description: 'Modern real-time chat application with secure authentication, message synchronization, and responsive design for seamless communication experience.',
+      fullDescription: 'A sophisticated real-time chat application built with modern web technologies. Features secure Firebase authentication, real-time message synchronization, responsive design, and intuitive user interface for seamless communication.',
+      image: 'from-emerald-500 to-teal-500',
+      tech: ['Next.js', 'Firebase', 'Tailwind CSS', 'TypeScript', 'Real-time Database'],
+      gradientFrom: '#10b981',
+      gradientTo: '#14b8a6',
+      icon: '💬',
       status: 'Completed',
-      duration: '3 months',
-      link: 'https://dental-surgeon-appointment-booking.vercel.app/',
-      features: ['Real-time Booking', 'Patient Records', 'Automated Notifications', 'Payment Integration'],
+      duration: '2.5 months',
+      link: 'https://evon-chat-app.vercel.app/auth/login',
+      features: ['Real-time Messaging', 'Secure Authentication', 'Responsive Design', 'TypeScript Support'],
     },
     {
       id: 2,
+      title: 'Dental Surgeon Appointment Booking',
+      category: 'Healthcare',
+      type: 'Featured',
+      description: 'A modern Dental Surgeon Appointment Booking App built with Next.js 15, Tailwind CSS v4.1, and Framer Motion. Enables patients to easily schedule, manage, and track appointments.',
+      fullDescription: 'A sophisticated dental appointment booking system featuring clean UI, smooth animations, and comprehensive appointment management. Patients can easily schedule appointments, track their booking history, and receive automated reminders for upcoming visits.',
+      image: 'from-blue-500 to-cyan-500',
+      tech: ['Next.js 15', 'Tailwind CSS v4.1', 'Framer Motion', 'Appointment Management', 'Responsive Design'],
+      gradientFrom: '#3b82f6',
+      gradientTo: '#06b6d4',
+      icon: '🦷',
+      status: 'Completed',
+      duration: '2.5 months',
+      link: 'https://dental-surgeon-appointment-booking.vercel.app/',
+      features: ['Easy Scheduling', 'Appointment Tracking', 'Clean UI', 'Smooth Animations'],
+    },
+    {
+      id: 3,
+      title: 'Family Homeo Clinic Appointment Booking',
+      category: 'Healthcare',
+      type: 'Featured',
+      description: 'Comprehensive homeopathic clinic appointment booking system with patient management, treatment history, and seamless appointment scheduling for holistic healthcare.',
+      fullDescription: 'A specialized appointment booking system designed for homeopathic clinics, featuring patient treatment history, holistic health assessments, and integrated appointment management for comprehensive homeopathic care.',
+      image: 'from-green-500 to-emerald-500',
+      tech: ['Next.js', 'React', 'Tailwind CSS', 'Patient Management', 'Treatment History'],
+      gradientFrom: '#10b981',
+      gradientTo: '#059669',
+      icon: '🌿',
+      status: 'Completed',
+      duration: '3 months',
+      link: 'https://homoe-clinic-appointment-booking-ap.vercel.app/',
+      features: ['Homeopathic Specialization', 'Treatment History', 'Patient Management', 'Health Assessments'],
+    },
+    {
+      id: 4,
       title: 'Patient Queue Management System',
       category: 'Healthcare',
       type: 'Featured',
@@ -76,7 +110,7 @@ export default function ProjectsPortfolio() {
       features: ['Smart Queuing', 'Real-time Updates', 'Priority Management', 'Wait Time Prediction'],
     },
     {
-      id: 3,
+      id: 5,
       title: 'Biryani Order & Sales Management',
       category: 'Restaurant',
       type: 'Featured',
@@ -94,7 +128,7 @@ export default function ProjectsPortfolio() {
     },
     // Additional Projects
     {
-      id: 4,
+      id: 6,
       title: 'Moon Shine Interiors',
       category: 'Interior Design',
       type: 'Business Website',
@@ -111,7 +145,7 @@ export default function ProjectsPortfolio() {
       features: ['Luxury Portfolio', 'Smooth Animations', 'Responsive Design', 'Client Gallery'],
     },
     {
-      id: 5,
+      id: 7,
       title: 'Bengal Label Manufacturing',
       category: 'Manufacturing',
       type: 'Corporate Website',
@@ -128,7 +162,7 @@ export default function ProjectsPortfolio() {
       features: ['Product Catalog', 'Manufacturing Process', 'Google Maps Integration', 'Responsive Design'],
     },
     {
-      id: 6,
+      id: 8,
       title: 'Evonnexis - Web & Mobile Development',
       category: 'Software Company',
       type: 'Company Website',
@@ -145,7 +179,7 @@ export default function ProjectsPortfolio() {
       features: ['Service Showcase', 'Technology Portfolio', 'Team Profiles', 'Client Testimonials'],
     },
     {
-      id: 7,
+      id: 9,
       title: 'Om Vatika Guest House - Banquet Booking',
       category: 'Hospitality',
       type: 'Booking System',
@@ -162,7 +196,7 @@ export default function ProjectsPortfolio() {
       features: ['Availability Check', 'Banquet Details', 'Booking Inquiries', 'Mobile-First Design'],
     },
     {
-      id: 8,
+      id: 10,
       title: 'Dayprise - Social Network App',
       category: 'Social Media',
       type: 'Mobile Application',
@@ -251,7 +285,7 @@ export default function ProjectsPortfolio() {
           className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16"
         >
           {[
-            { icon: <Code className="h-6 w-6" />, number: '8', label: 'Total Projects', color: 'from-blue-600 to-cyan-600' },
+            { icon: <Code className="h-6 w-6" />, number: '10', label: 'Total Projects', color: 'from-blue-600 to-cyan-600' },
             { icon: <Users className="h-6 w-6" />, number: '15+', label: 'Happy Clients', color: 'from-purple-600 to-pink-600' },
             { icon: <Calendar className="h-6 w-6" />, number: '4', label: 'Years Experience', color: 'from-green-600 to-emerald-600' },
             { icon: <Award className="h-6 w-6" />, number: '100%', label: 'Success Rate', color: 'from-orange-600 to-red-600' },
