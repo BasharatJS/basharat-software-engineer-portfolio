@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 
 export default function Header() {
   const [isDark, setIsDark] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -26,6 +27,11 @@ export default function Header() {
       document.documentElement.classList.remove('dark');
     }
   }, []);
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
 
   const toggleTheme = () => {
     const newTheme = !isDark;
@@ -95,15 +101,58 @@ export default function Header() {
               )}
             </button>
             
-            <button className="md:hidden p-2 rounded-lg bg-accent hover:bg-muted transition-colors">
+            <button 
+              className="md:hidden p-2 rounded-lg bg-accent hover:bg-muted transition-colors"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle mobile menu"
+            >
               <div className="w-5 h-5 flex flex-col justify-center items-center">
-                <span className="block w-4 h-0.5 bg-accent-foreground mb-1"></span>
-                <span className="block w-4 h-0.5 bg-accent-foreground mb-1"></span>
-                <span className="block w-4 h-0.5 bg-accent-foreground"></span>
+                <span className={`block w-4 h-0.5 bg-accent-foreground mb-1 transition-all duration-300 ${
+                  isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''
+                }`}></span>
+                <span className={`block w-4 h-0.5 bg-accent-foreground mb-1 transition-all duration-300 ${
+                  isMobileMenuOpen ? 'opacity-0' : ''
+                }`}></span>
+                <span className={`block w-4 h-0.5 bg-accent-foreground transition-all duration-300 ${
+                  isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''
+                }`}></span>
               </div>
             </button>
           </div>
         </div>
+
+        {/* Mobile Navigation Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-md border-b border-border shadow-lg">
+            <nav className="container mx-auto px-4 py-4">
+              <div className="flex flex-col space-y-2">
+                {[
+                  { name: 'Home', href: '/' },
+                  { name: 'About', href: '/about' },
+                  { name: 'Projects', href: '/projects' },
+                  { name: 'Services', href: '/services' },
+                  { name: 'Contact', href: '/contact' }
+                ].map((item) => {
+                  const isActive = pathname === item.href;
+                  return (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={`block px-4 py-3 rounded-xl font-medium transition-all duration-300 ${
+                        isActive
+                          ? 'text-white bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 shadow-lg'
+                          : 'text-foreground hover:text-white hover:bg-gradient-to-r hover:from-blue-600/80 hover:via-purple-600/80 hover:to-indigo-600/80 hover:shadow-lg'
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
+                  );
+                })}
+              </div>
+            </nav>
+          </div>
+        )}
       </div>
     </header>
   );
