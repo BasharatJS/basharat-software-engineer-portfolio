@@ -28,7 +28,7 @@ export default function Footer() {
           <div className="space-y-6 lg:col-span-1">
             <div className="space-y-4">
               <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                CodeByBasharat
+                CodeWithBasharat
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 Full-Stack Software Engineer creating innovative digital
