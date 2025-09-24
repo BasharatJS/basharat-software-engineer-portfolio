@@ -107,7 +107,7 @@ export default function ProjectsPortfolio() {
       icon: '🍛',
       status: 'Completed',
       duration: '4 months',
-      link: 'https://biryani-classical-sales-app.vercel.app',
+      link: 'https://biryani-sales-app-demo.vercel.app/',
       features: ['Online Ordering', 'Inventory Management', 'Sales Analytics', 'Customer Management'],
     },
     // Additional Projects
