@@ -5,6 +5,7 @@ import {
   Download,
   Github,
   Linkedin,
+  ExternalLink,
 } from 'lucide-react'
 import { useState, useEffect } from 'react'
 
@@ -128,6 +129,15 @@ export default function HeroSection() {
             >
               <Linkedin className="h-5 w-5" />
               LinkedIn
+            </a>
+            <a
+              href="https://www.upwork.com/freelancers/~018d3356e7952c4294?mp_source=share"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group px-8 py-4 border-2 border-primary/20 bg-card/50 backdrop-blur-sm text-foreground rounded-xl font-medium hover:border-transparent hover:bg-gradient-to-r hover:from-blue-600 hover:via-purple-600 hover:to-indigo-600 hover:text-white transition-all hover:scale-105 hover:shadow-xl flex items-center gap-2"
+            >
+              <ExternalLink className="h-5 w-5" />
+              Upwork Profile
             </a>
             <a
               href="/Basharat-Software-Engineer-Resume.pdf"
