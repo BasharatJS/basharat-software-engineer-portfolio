@@ -23,8 +23,12 @@ import {
   Heart,
 } from 'lucide-react'
 import Link from 'next/link'
+import { useState } from 'react'
+
+type ProjectCategory = 'All' | 'Landing Page' | 'Custom Web App' | 'Custom Mobile App'
 
 export default function ProjectsPortfolio() {
+  const [selectedCategory, setSelectedCategory] = useState<ProjectCategory>('All')
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
@@ -40,11 +44,11 @@ export default function ProjectsPortfolio() {
   }
 
   const projects = [
-    // Featured Projects (First 4)
+    // Custom Web Apps
     {
       id: 1,
       title: 'EvonChat - Real-time Chat Application',
-      category: 'Communication',
+      category: 'Custom Web App',
       type: 'Featured',
       description: 'Modern real-time chat application with secure authentication, message synchronization, and responsive design for seamless communication experience.',
       fullDescription: 'A sophisticated real-time chat application built with modern web technologies. Features secure Firebase authentication, real-time message synchronization, responsive design, and intuitive user interface for seamless communication.',
@@ -61,7 +65,7 @@ export default function ProjectsPortfolio() {
     {
       id: 2,
       title: 'POS Restaurant Management System',
-      category: 'Restaurant',
+      category: 'Custom Web App',
       type: 'Featured',
       description: 'A modern, comprehensive Point of Sale (POS) system designed specifically for restaurants, built with Next.js 15, React, and Firebase.',
       fullDescription: 'A comprehensive POS system featuring digital table management with 24-table grid, smart menu system with categorized items, quick order taking, instant KOT generation, real-time analytics, staff management, inventory control, and multi-location support with role-based access control.',
@@ -75,11 +79,11 @@ export default function ProjectsPortfolio() {
       link: 'https://pos-restaurant-system.vercel.app',
       features: ['Digital Table Management', 'Smart Menu System', 'Real-time Analytics', 'Multi-location Support'],
     },
-   
+
     {
       id: 3,
       title: 'Patient Queue Management System',
-      category: 'Healthcare',
+      category: 'Custom Web App',
       type: 'Featured',
       description: 'Smart queue management with real-time updates, priority handling, and waiting time predictions to optimize patient flow.',
       fullDescription: 'An intelligent queue management system that transforms the patient experience in healthcare facilities. The system provides real-time updates, dynamic queue optimization, and predictive wait time calculations.',
@@ -95,26 +99,8 @@ export default function ProjectsPortfolio() {
     },
     {
       id: 4,
-      title: 'Biryani Order & Sales Management',
-      category: 'Restaurant',
-      type: 'Featured',
-      description: 'Complete restaurant management system with online ordering, inventory tracking, sales analytics, and customer management.',
-      fullDescription: 'A full-featured restaurant management platform that handles everything from online ordering to inventory management. Includes customer loyalty programs, detailed analytics, and multi-location support.',
-      image: 'from-orange-500 to-red-500',
-      tech: ['Next.js', 'Firebase', 'Tailwind CSS', 'Payment Gateway', 'Analytics'],
-      gradientFrom: '#f97316',
-      gradientTo: '#ef4444',
-      icon: '🍛',
-      status: 'Completed',
-      duration: '4 months',
-      link: 'https://biryani-sales-app-demo.vercel.app/',
-      features: ['Online Ordering', 'Inventory Management', 'Sales Analytics', 'Customer Management'],
-    },
-    // Additional Projects
-    {
-      id: 5,
       title: 'Dental Surgeon Appointment Booking',
-      category: 'Healthcare',
+      category: 'Custom Web App',
       type: 'Featured',
       description: 'A modern Dental Surgeon Appointment Booking App built with Next.js 15, Tailwind CSS v4.1, and Framer Motion. Enables patients to easily schedule, manage, and track appointments.',
       fullDescription: 'A sophisticated dental appointment booking system featuring clean UI, smooth animations, and comprehensive appointment management. Patients can easily schedule appointments, track their booking history, and receive automated reminders for upcoming visits.',
@@ -129,9 +115,9 @@ export default function ProjectsPortfolio() {
       features: ['Easy Scheduling', 'Appointment Tracking', 'Clean UI', 'Smooth Animations'],
     },
     {
-      id: 6,
+      id: 5,
       title: 'Family Homeo Clinic Appointment Booking',
-      category: 'Healthcare',
+      category: 'Custom Web App',
       type: 'Featured',
       description: 'Comprehensive homeopathic clinic appointment booking system with patient management, treatment history, and seamless appointment scheduling for holistic healthcare.',
       fullDescription: 'A specialized appointment booking system designed for homeopathic clinics, featuring patient treatment history, holistic health assessments, and integrated appointment management for comprehensive homeopathic care.',
@@ -145,10 +131,11 @@ export default function ProjectsPortfolio() {
       link: 'https://homoe-clinic-appointment-booking-ap.vercel.app/',
       features: ['Homeopathic Specialization', 'Treatment History', 'Patient Management', 'Health Assessments'],
     },
+    // Landing Pages
     {
-      id: 7,
+      id: 6,
       title: 'Moon Shine Interiors',
-      category: 'Interior Design',
+      category: 'Landing Page',
       type: 'Business Website',
       description: 'Moon Shine Interior is a premium interior design company specializing in luxury residential and commercial spaces.',
       fullDescription: 'A sophisticated website for a premium interior design company, showcasing their portfolio of luxury residential and commercial projects. Features elegant galleries, service showcases, and client testimonials with smooth animations.',
@@ -163,9 +150,9 @@ export default function ProjectsPortfolio() {
       features: ['Luxury Portfolio', 'Smooth Animations', 'Responsive Design', 'Client Gallery'],
     },
     {
-      id: 8,
+      id: 7,
       title: 'Bengal Label Manufacturing',
-      category: 'Manufacturing',
+      category: 'Landing Page',
       type: 'Corporate Website',
       description: 'Bengal Label Manufacturing is a leading textile manufacturing company specializing in high-quality labels and packaging solutions for the fashion industry.',
       fullDescription: 'A comprehensive corporate website for a leading textile manufacturing company. Showcases their manufacturing capabilities, product catalog, and industry expertise with interactive elements and location mapping.',
@@ -180,9 +167,9 @@ export default function ProjectsPortfolio() {
       features: ['Product Catalog', 'Manufacturing Process', 'Google Maps Integration', 'Responsive Design'],
     },
     {
-      id: 9,
+      id: 8,
       title: 'Evonnexis - Web & Mobile Development',
-      category: 'Software Company',
+      category: 'Landing Page',
       type: 'Company Website',
       description: 'A comprehensive software development company website showcasing modern web solutions, innovative technologies, and professional services with elegant design and smooth animations.',
       fullDescription: 'A modern and professional website for a software development company, featuring service portfolios, technology showcases, team profiles, and client success stories with interactive animations.',
@@ -197,9 +184,9 @@ export default function ProjectsPortfolio() {
       features: ['Service Showcase', 'Technology Portfolio', 'Team Profiles', 'Client Testimonials'],
     },
     {
-      id: 10,
+      id: 9,
       title: 'Om Vatika Guest House - Banquet Booking',
-      category: 'Hospitality',
+      category: 'Landing Page',
       type: 'Booking System',
       description: 'Developed a responsive and modern web application for Ohm Vatika Guest House to streamline banquet hall bookings. Built using Next.js 15, Tailwind CSS v4.1, and Framer Motion.',
       fullDescription: 'A modern banquet booking system that allows users to check availability, view banquet details, and send booking inquiries. Features clean UI, smooth transitions, and mobile-first design to enhance user experience.',
@@ -214,9 +201,27 @@ export default function ProjectsPortfolio() {
       features: ['Availability Check', 'Banquet Details', 'Booking Inquiries', 'Mobile-First Design'],
     },
     {
+      id: 10,
+      title: 'Sarkar Enterprises - Solar Energy Solutions',
+      category: 'Landing Page',
+      type: 'Business Website',
+      description: 'Leading solar energy solutions across India. Government certified solar panel installation with PM SURYA GHAR MUFT BIJLI YOJNA scheme participation.',
+      fullDescription: 'A comprehensive solar energy solutions platform offering residential and commercial solar installations. Features MNRE approved products, ISO certified services, 25-year warranty, and up to 40% government subsidies with quick 7-day installation process.',
+      image: 'from-amber-500 to-yellow-500',
+      tech: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'Responsive Design', 'JavaScript'],
+      gradientFrom: '#f59e0b',
+      gradientTo: '#eab308',
+      icon: '☀️',
+      status: 'Completed',
+      duration: '2.5 months',
+      link: 'https://sarkar-enterprises-solar-web-app.vercel.app',
+      features: ['Government Certified', '25-Year Warranty', 'Nationwide Service', '24/7 Support'],
+    },
+    // Custom Mobile Apps
+    {
       id: 11,
       title: 'Dayprise - Social Network App',
-      category: 'Social Media',
+      category: 'Custom Mobile App',
       type: 'Mobile Application',
       description: 'DAYPRISE is a unique application which gives real emotions and a meaning to the word social network based on time, where each event rhymes with a unique experience.',
       fullDescription: 'An innovative social networking mobile application that focuses on time-based events and experiences. Users can share birthdays, weddings, graduations, outings with friends, and career milestones in a meaningful way.',
@@ -232,7 +237,11 @@ export default function ProjectsPortfolio() {
     },
   ]
 
-  const categories = ['All', 'Featured', 'Healthcare', 'Restaurant', 'Business Website', 'Corporate Website', 'Company Website', 'Booking System', 'Mobile Application']
+  const categories: ProjectCategory[] = ['All', 'Landing Page', 'Custom Web App', 'Custom Mobile App']
+
+  const filteredProjects = selectedCategory === 'All'
+    ? projects
+    : projects.filter(project => project.category === selectedCategory)
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -289,9 +298,98 @@ export default function ProjectsPortfolio() {
             </span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Discover my journey through innovative projects that solve real-world problems. 
+            Discover my journey through innovative projects that solve real-world problems.
             From healthcare solutions to business automation, each project showcases technical excellence and user-centric design.
           </p>
+        </motion.div>
+
+        {/* Filter Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+          <div className="flex flex-wrap justify-center items-center gap-4">
+            {categories.map((category, index) => {
+              const isActive = selectedCategory === category
+              return (
+                <motion.button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className={`
+                    relative px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300
+                    ${isActive
+                      ? 'text-white shadow-lg'
+                      : 'text-muted-foreground bg-card border border-border hover:border-primary/30 hover:shadow-md'
+                    }
+                  `}
+                  style={isActive ? {
+                    background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+                  } : {}}
+                >
+                  <span className="relative z-10 flex items-center gap-2">
+                    {category === 'All' && <Globe className="h-4 w-4" />}
+                    {category === 'Landing Page' && <Palette className="h-4 w-4" />}
+                    {category === 'Custom Web App' && <Code className="h-4 w-4" />}
+                    {category === 'Custom Mobile App' && <Smartphone className="h-4 w-4" />}
+                    {category}
+                  </span>
+                  {isActive && (
+                    <motion.div
+                      layoutId="activeFilter"
+                      className="absolute inset-0 rounded-xl"
+                      style={{
+                        background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+                      }}
+                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                    />
+                  )}
+                  {isActive && (
+                    <motion.div
+                      className="absolute inset-0 rounded-xl blur-lg opacity-50"
+                      style={{
+                        background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+                      }}
+                      animate={{
+                        scale: [1, 1.1, 1],
+                        opacity: [0.5, 0.7, 0.5],
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: 'easeInOut',
+                      }}
+                    />
+                  )}
+                </motion.button>
+              )
+            })}
+          </div>
+
+          {/* Active Filter Count */}
+          <motion.div
+            key={selectedCategory}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            className="text-center mt-6"
+          >
+            <p className="text-muted-foreground">
+              Showing <span className="font-bold text-primary">{filteredProjects.length}</span> {filteredProjects.length === 1 ? 'project' : 'projects'}
+              {selectedCategory !== 'All' && (
+                <span className="ml-1">
+                  in <span className="font-bold text-foreground">{selectedCategory}</span>
+                </span>
+              )}
+            </p>
+          </motion.div>
         </motion.div>
 
         {/* Stats Overview */}
@@ -328,13 +426,13 @@ export default function ProjectsPortfolio() {
 
         {/* Projects Grid */}
         <motion.div
+          key={selectedCategory}
           variants={staggerContainer}
           initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
+          animate="animate"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {projects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
               variants={fadeInUp}
