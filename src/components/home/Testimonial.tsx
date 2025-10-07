@@ -85,24 +85,48 @@ export default function Testimonial() {
         >
           {[
             {
-              name: 'Dr. Sarah Ahmed',
-              role: 'Clinic Owner',
-              company: 'Wellness Medical Center',
+              name: 'Jamsher Ali',
+              role: 'Business Owner',
+              company: 'Sarkar Enterprises Solar',
+              rating: 5,
+              text: 'Basharat delivered an exceptional website for our solar business. His professionalism, technical expertise, and dedication to our vision exceeded all expectations. The website is modern, user-friendly, and has significantly boosted our online presence!',
+              avatar: '☀️',
+              gradientFrom: '#f59e0b',
+              gradientTo: '#d97706',
+              website: 'https://www.sarkarenterprisessolar.in/',
+            },
+            {
+              name: 'Dr. Saddam Hussain',
+              role: 'Dental Surgeon',
+              company: 'Dental Care Clinic',
               rating: 5,
               text: 'Basharat transformed our appointment system completely. From manual booking to a smart digital solution - our efficiency increased by 80%. Highly recommended!',
-              avatar: '👩‍⚕️',
+              avatar: '👨‍⚕️',
               gradientFrom: '#3b82f6',
               gradientTo: '#06b6d4',
+              website: 'https://dental-surgeon-appointment-booking.vercel.app/',
+            },
+            {
+              name: 'Dr. Gajala Parween',
+              role: 'BHMS(MU), DMT',
+              company: 'Homeopathy Clinic',
+              rating: 5,
+              text: 'Outstanding work by Basharat! The appointment booking system has streamlined our clinic operations perfectly. Patient management is now effortless and our patients love the easy online booking feature.',
+              avatar: '👩‍⚕️',
+              gradientFrom: '#10b981',
+              gradientTo: '#059669',
+              website: 'https://homoe-clinic-appointment-booking-ap.vercel.app/',
             },
             {
               name: 'Ahmad Khan',
               role: 'Restaurant Owner',
-              company: 'Biryani Palace',
+              company: 'Armania Biryani House',
               rating: 5,
               text: 'The ordering system Basharat built for us revolutionized our business. Online orders, inventory tracking, everything automated. Sales increased 150%!',
               avatar: '👨‍🍳',
               gradientFrom: '#f97316',
               gradientTo: '#ef4444',
+              website: 'https://biryani-sales-app-demo.vercel.app/',
             },
             {
               name: 'Fatima Ali',
@@ -219,12 +243,25 @@ export default function Testimonial() {
                       <p className="text-sm text-muted-foreground">
                         {testimonial.role}
                       </p>
-                      <p
-                        className="text-xs font-medium"
-                        style={{ color: testimonial.gradientFrom }}
-                      >
-                        {testimonial.company}
-                      </p>
+                      {testimonial.website ? (
+                        <a
+                          href={testimonial.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs font-medium cursor-pointer inline-flex items-center gap-1"
+                          style={{ color: testimonial.gradientFrom }}
+                        >
+                          {testimonial.company}
+                          <span className="text-[10px]">🔗</span>
+                        </a>
+                      ) : (
+                        <p
+                          className="text-xs font-medium"
+                          style={{ color: testimonial.gradientFrom }}
+                        >
+                          {testimonial.company}
+                        </p>
+                      )}
                     </div>
                   </div>
                 </div>

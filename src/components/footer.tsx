@@ -11,6 +11,7 @@ import {
   Workflow,
   Calculator,
   Settings,
+  Cpu,
 } from 'lucide-react'
 
 export default function Footer() {
@@ -27,9 +28,15 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-6 lg:col-span-1">
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                CodeWithBasharat
-              </h3>
+              <div className="flex items-center gap-2">
+                <div className="relative group">
+                  <Cpu className="h-7 w-7 text-primary transition-transform group-hover:scale-110 group-hover:rotate-12" strokeWidth={2} />
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 opacity-30 blur-lg group-hover:opacity-50 transition-opacity" />
+                </div>
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                  BasharatSolutions
+                </h3>
+              </div>
               <p className="text-muted-foreground leading-relaxed">
                 Full-Stack Software Engineer creating innovative digital
                 solutions that transform businesses and drive sustainable

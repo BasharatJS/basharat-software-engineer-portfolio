@@ -47,15 +47,32 @@ export default function ProjectsPortfolio() {
     // Custom Web Apps
     {
       id: 1,
+      title: 'Biryani Order & Management System',
+      category: 'Custom Web App',
+      type: 'Featured',
+      description: 'Comprehensive biryani ordering and sales management system with real-time order tracking, daily sales analytics, revenue insights, and automated inventory management for restaurant operations.',
+      fullDescription: 'A complete biryani restaurant management solution designed for streamlined operations. Features include online ordering, real-time order tracking, daily sales monitoring, total revenue analytics, inventory management, and detailed reporting for restaurant managers.',
+      image: 'from-orange-500 to-red-500',
+      tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Real-time Analytics', 'Order Management'],
+      gradientFrom: '#f97316',
+      gradientTo: '#ef4444',
+      icon: '🍛',
+      status: 'Completed',
+      duration: '3 months',
+      link: 'https://biryani-sales-app-demo.vercel.app/',
+      features: ['Online Ordering', 'Daily Sales Analytics', 'Revenue Tracking', 'Inventory Management'],
+    },
+    {
+      id: 2,
       title: 'Kurta Pajama Shop - Inventory Management',
       category: 'Custom Web App',
       type: 'Featured',
       description: 'Comprehensive inventory management system for traditional clothing shop with stock tracking, sales analytics, and automated reporting features.',
       fullDescription: 'A sophisticated inventory management system designed specifically for traditional clothing retail. Features include real-time stock tracking, sales analytics, automated reporting, customer management, and multi-category product organization for efficient business operations.',
-      image: 'from-orange-500 to-red-500',
+      image: 'from-teal-700 to-teal-900',
       tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Inventory System', 'Analytics Dashboard'],
-      gradientFrom: '#f97316',
-      gradientTo: '#ef4444',
+      gradientFrom: '#0f766e',
+      gradientTo: '#134e4a',
       icon: '👔',
       status: 'Completed',
       duration: '3 months',
@@ -64,7 +81,7 @@ export default function ProjectsPortfolio() {
     },
     
     {
-      id: 2,
+      id: 3,
       title: 'POS Restaurant Management System',
       category: 'Custom Web App',
       type: 'Featured',
@@ -82,7 +99,7 @@ export default function ProjectsPortfolio() {
     },
 
     {
-      id: 3,
+      id: 4,
       title: 'Patient Queue Management System',
       category: 'Custom Web App',
       type: 'Featured',
@@ -99,7 +116,7 @@ export default function ProjectsPortfolio() {
       features: ['Smart Queuing', 'Real-time Updates', 'Priority Management', 'Wait Time Prediction'],
     },
     {
-      id: 4,
+      id: 5,
       title: 'EvonChat - Real-time Chat Application',
       category: 'Custom Web App',
       type: 'Featured',
@@ -116,16 +133,16 @@ export default function ProjectsPortfolio() {
       features: ['Real-time Messaging', 'Secure Authentication', 'Responsive Design', 'TypeScript Support'],
     },
     {
-      id: 5,
+      id: 6,
       title: 'Dental Surgeon Appointment Booking',
       category: 'Custom Web App',
       type: 'Featured',
       description: 'A modern Dental Surgeon Appointment Booking App built with Next.js 15, Tailwind CSS v4.1, and Framer Motion. Enables patients to easily schedule, manage, and track appointments.',
       fullDescription: 'A sophisticated dental appointment booking system featuring clean UI, smooth animations, and comprehensive appointment management. Patients can easily schedule appointments, track their booking history, and receive automated reminders for upcoming visits.',
-      image: 'from-blue-500 to-cyan-500',
+      image: 'from-green-700 to-green-900',
       tech: ['Next.js 15', 'Tailwind CSS v4.1', 'Framer Motion', 'Appointment Management', 'Responsive Design'],
-      gradientFrom: '#3b82f6',
-      gradientTo: '#06b6d4',
+      gradientFrom: '#15803d',
+      gradientTo: '#14532d',
       icon: '🦷',
       status: 'Completed',
       duration: '2.5 months',
@@ -133,7 +150,7 @@ export default function ProjectsPortfolio() {
       features: ['Easy Scheduling', 'Appointment Tracking', 'Clean UI', 'Smooth Animations'],
     },
     {
-      id: 6,
+      id: 7,
       title: 'Family Homeo Clinic Appointment Booking',
       category: 'Custom Web App',
       type: 'Featured',
@@ -151,7 +168,7 @@ export default function ProjectsPortfolio() {
     },
     // Landing Pages
     {
-      id: 7,
+      id: 8,
       title: 'Moon Shine Interiors',
       category: 'Landing Page',
       type: 'Business Website',
@@ -168,7 +185,7 @@ export default function ProjectsPortfolio() {
       features: ['Luxury Portfolio', 'Smooth Animations', 'Responsive Design', 'Client Gallery'],
     },
     {
-      id: 8,
+      id: 9,
       title: 'Bengal Label Manufacturing',
       category: 'Landing Page',
       type: 'Corporate Website',
@@ -185,7 +202,7 @@ export default function ProjectsPortfolio() {
       features: ['Product Catalog', 'Manufacturing Process', 'Google Maps Integration', 'Responsive Design'],
     },
     {
-      id: 9,
+      id: 10,
       title: 'Evonnexis - Web & Mobile Development',
       category: 'Landing Page',
       type: 'Company Website',
@@ -202,7 +219,7 @@ export default function ProjectsPortfolio() {
       features: ['Service Showcase', 'Technology Portfolio', 'Team Profiles', 'Client Testimonials'],
     },
     {
-      id: 10,
+      id: 11,
       title: 'Om Vatika Guest House - Banquet Booking',
       category: 'Landing Page',
       type: 'Booking System',
@@ -219,7 +236,7 @@ export default function ProjectsPortfolio() {
       features: ['Availability Check', 'Banquet Details', 'Booking Inquiries', 'Mobile-First Design'],
     },
     {
-      id: 11,
+      id: 12,
       title: 'Sarkar Enterprises - Solar Energy Solutions',
       category: 'Landing Page',
       type: 'Business Website',
@@ -232,12 +249,12 @@ export default function ProjectsPortfolio() {
       icon: '☀️',
       status: 'Completed',
       duration: '2.5 months',
-      link: 'https://sarkar-enterprises-solar-web-app.vercel.app',
+      link: 'https://www.sarkarenterprisessolar.in/',
       features: ['Government Certified', '25-Year Warranty', 'Nationwide Service', '24/7 Support'],
     },
     // Custom Mobile Apps
     {
-      id: 12,
+      id: 13,
       title: 'Dayprise - Social Network App',
       category: 'Custom Mobile App',
       type: 'Mobile Application',
@@ -419,7 +436,7 @@ export default function ProjectsPortfolio() {
           className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16"
         >
           {[
-            { icon: <Code className="h-6 w-6" />, number: '12', label: 'Total Projects', color: 'from-blue-600 to-cyan-600' },
+            { icon: <Code className="h-6 w-6" />, number: '13', label: 'Total Projects', color: 'from-blue-600 to-cyan-600' },
             { icon: <Users className="h-6 w-6" />, number: '15+', label: 'Happy Clients', color: 'from-purple-600 to-pink-600' },
             { icon: <Calendar className="h-6 w-6" />, number: '4', label: 'Years Experience', color: 'from-green-600 to-emerald-600' },
             { icon: <Award className="h-6 w-6" />, number: '100%', label: 'Success Rate', color: 'from-orange-600 to-red-600' },

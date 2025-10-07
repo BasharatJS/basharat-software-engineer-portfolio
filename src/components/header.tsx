@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Sun, Moon } from 'lucide-react';
+import { Sun, Moon, Cpu } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -49,9 +49,13 @@ export default function Header() {
     <header className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
+          <div className="flex items-center gap-2">
+            <div className="relative group">
+              <Cpu className="h-7 w-7 text-primary transition-transform group-hover:scale-110 group-hover:rotate-12" strokeWidth={2} />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 opacity-30 blur-lg group-hover:opacity-50 transition-opacity" />
+            </div>
             <h1 className="text-lg lg:text-xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
-              CodeWithBasharat
+              BasharatSolutions
             </h1>
           </div>
           
