@@ -64,6 +64,23 @@ export default function ProjectsPortfolio() {
     },
     {
       id: 2,
+      title: 'Medicine Inventory Management System',
+      category: 'Custom Web App',
+      type: 'Featured',
+      description: 'Comprehensive medicine inventory management system with stock tracking, expiry monitoring, automated alerts, and sales analytics for pharmacy operations.',
+      fullDescription: 'A sophisticated medicine inventory management system designed for pharmacies and medical stores. Features include real-time stock tracking, expiry date monitoring, automated low stock alerts, batch management, sales analytics, and detailed reporting for efficient pharmacy operations.',
+      image: 'from-blue-600 to-cyan-600',
+      tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Inventory Management', 'Analytics'],
+      gradientFrom: '#2563eb',
+      gradientTo: '#0891b2',
+      icon: '💊',
+      status: 'Completed',
+      duration: '3 months',
+      link: 'https://medicine-inventory-app.vercel.app/',
+      features: ['Stock Tracking', 'Expiry Monitoring', 'Automated Alerts', 'Sales Analytics'],
+    },
+    {
+      id: 3,
       title: 'Kurta Pajama Shop - Inventory Management',
       category: 'Custom Web App',
       type: 'Featured',
@@ -79,9 +96,9 @@ export default function ProjectsPortfolio() {
       link: 'https://kurta-pajama-shop-inventory-app.vercel.app/',
       features: ['Stock Tracking', 'Sales Analytics', 'Automated Reports', 'Customer Management'],
     },
-    
+
     {
-      id: 3,
+      id: 4,
       title: 'POS Restaurant Management System',
       category: 'Custom Web App',
       type: 'Featured',
@@ -99,7 +116,7 @@ export default function ProjectsPortfolio() {
     },
 
     {
-      id: 4,
+      id: 5,
       title: 'Patient Queue Management System',
       category: 'Custom Web App',
       type: 'Featured',
@@ -116,7 +133,7 @@ export default function ProjectsPortfolio() {
       features: ['Smart Queuing', 'Real-time Updates', 'Priority Management', 'Wait Time Prediction'],
     },
     {
-      id: 5,
+      id: 6,
       title: 'EvonChat - Real-time Chat Application',
       category: 'Custom Web App',
       type: 'Featured',
@@ -133,7 +150,7 @@ export default function ProjectsPortfolio() {
       features: ['Real-time Messaging', 'Secure Authentication', 'Responsive Design', 'TypeScript Support'],
     },
     {
-      id: 6,
+      id: 7,
       title: 'Dental Surgeon Appointment Booking',
       category: 'Custom Web App',
       type: 'Featured',
@@ -150,7 +167,7 @@ export default function ProjectsPortfolio() {
       features: ['Easy Scheduling', 'Appointment Tracking', 'Clean UI', 'Smooth Animations'],
     },
     {
-      id: 7,
+      id: 8,
       title: 'Family Homeo Clinic Appointment Booking',
       category: 'Custom Web App',
       type: 'Featured',
@@ -168,7 +185,7 @@ export default function ProjectsPortfolio() {
     },
     // Landing Pages
     {
-      id: 8,
+      id: 9,
       title: 'Moon Shine Interiors',
       category: 'Landing Page',
       type: 'Business Website',
@@ -185,7 +202,7 @@ export default function ProjectsPortfolio() {
       features: ['Luxury Portfolio', 'Smooth Animations', 'Responsive Design', 'Client Gallery'],
     },
     {
-      id: 9,
+      id: 10,
       title: 'Bengal Label Manufacturing',
       category: 'Landing Page',
       type: 'Corporate Website',
@@ -202,7 +219,7 @@ export default function ProjectsPortfolio() {
       features: ['Product Catalog', 'Manufacturing Process', 'Google Maps Integration', 'Responsive Design'],
     },
     {
-      id: 10,
+      id: 11,
       title: 'Evonnexis - Web & Mobile Development',
       category: 'Landing Page',
       type: 'Company Website',
@@ -219,7 +236,7 @@ export default function ProjectsPortfolio() {
       features: ['Service Showcase', 'Technology Portfolio', 'Team Profiles', 'Client Testimonials'],
     },
     {
-      id: 11,
+      id: 12,
       title: 'Om Vatika Guest House - Banquet Booking',
       category: 'Landing Page',
       type: 'Booking System',
@@ -236,7 +253,7 @@ export default function ProjectsPortfolio() {
       features: ['Availability Check', 'Banquet Details', 'Booking Inquiries', 'Mobile-First Design'],
     },
     {
-      id: 12,
+      id: 13,
       title: 'Sarkar Enterprises - Solar Energy Solutions',
       category: 'Landing Page',
       type: 'Business Website',
@@ -254,7 +271,7 @@ export default function ProjectsPortfolio() {
     },
     // Custom Mobile Apps
     {
-      id: 13,
+      id: 14,
       title: 'Dayprise - Social Network App',
       category: 'Custom Mobile App',
       type: 'Mobile Application',
@@ -436,7 +453,7 @@ export default function ProjectsPortfolio() {
           className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16"
         >
           {[
-            { icon: <Code className="h-6 w-6" />, number: '13', label: 'Total Projects', color: 'from-blue-600 to-cyan-600' },
+            { icon: <Code className="h-6 w-6" />, number: '14', label: 'Total Projects', color: 'from-blue-600 to-cyan-600' },
             { icon: <Users className="h-6 w-6" />, number: '15+', label: 'Happy Clients', color: 'from-purple-600 to-pink-600' },
             { icon: <Calendar className="h-6 w-6" />, number: '4', label: 'Years Experience', color: 'from-green-600 to-emerald-600' },
             { icon: <Award className="h-6 w-6" />, number: '100%', label: 'Success Rate', color: 'from-orange-600 to-red-600' },

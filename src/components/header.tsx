@@ -54,9 +54,14 @@ export default function Header() {
               <Cpu className="h-7 w-7 text-primary transition-transform group-hover:scale-110 group-hover:rotate-12" strokeWidth={2} />
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 opacity-30 blur-lg group-hover:opacity-50 transition-opacity" />
             </div>
-            <h1 className="text-lg lg:text-xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
-              BasharatSolutions
-            </h1>
+            <div className="flex flex-col items-center leading-tight">
+              <h1 className="text-base lg:text-lg font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                ModernStack
+              </h1>
+              <h2 className="text-base lg:text-lg font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                Developer
+              </h2>
+            </div>
           </div>
           
           <nav className="hidden md:flex items-center space-x-2">
